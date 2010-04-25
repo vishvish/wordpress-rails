@@ -1,0 +1,7 @@
+This is for Rails 3. It's a basic wraps around your existing Wordpress installation for posts. Comments are quite easy to do as well, but you'll have to wait for me to extract it from my application.
+
+Interesting places to look.
+
+app/models/Option - this is where all the permalink stuff happens. This is assuming you want to use Wordpress permalinks. I do, this way you can maintain and not break existing links. The reason I use a default permalink in the environment is so that the routes file doesn't throw an error when we're using Rake or testing.
+
+If you want search, which you probably do, use Sunspot and Solr. They work well. There's an example sunspot config in the Post model.

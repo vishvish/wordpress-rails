@@ -1,0 +1,6 @@
+	<h3>Recent Posts</h3>
+	<ol>
+	<% Post.latest( 50 ).each do |p|%>
+	<li><%= link_to p.title, "/news#{p.permalink}" %>&nbsp;/&nbsp;<span class="short_date"><%= p.post_date_gmt.to_s( :abbr ) %></span></li>
+	<% end %>
+	</ol>

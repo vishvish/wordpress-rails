@@ -1,0 +1,10 @@
+<div class="grid_8">
+	<div class="content">
+		<h3><%= @post.title %></h3>
+		<%= @post.clean_content.html_safe -%>
+	</div>	
+</div>
+<div class="grid_4">
+<%= render :partial => 'sidebar' %>
+</div>
+<div class="clear"></div>

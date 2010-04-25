@@ -1,0 +1,34 @@
+<div class="grid_3 sidebar">
+</div>
+<div class="grid_3 sidebar">
+</div>
+<div class="grid_3 sidebar">
+</div>
+<div class="grid_3 sidebar">
+</div>
+
+
+
+
+<div class="grid_8 exploits">
+	<span class="page_info"><%= raw( page_entries_info @posts ) %></span>
+	<div class="clear"></div>
+	<br />
+	<%= will_paginate @posts %>
+	<% @posts.each do |p|%>
+	<div class="post">
+		<h2 class="title"><%= link_to p.title, "/exploits#{p.permalink}" %></h2>
+		<div class="content">
+			<div class="datemark">
+				<p><%= p.post_date_gmt.to_s( :article ) %></p>
+			</div>
+			<%= create_shadowbox_links( "<div class=\"clean_content\">#{p.clean_content}</div>", p.id, p.title ).html_safe -%>
+		</div>
+	</div>
+	<% end %>
+</div>
+<div class="grid_4 sidebar">
+<%= render :partial => 'sidebar' %>
+</div>
+<div class="clear"></div>
+

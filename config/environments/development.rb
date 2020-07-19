@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Wordpress::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
 
@@ -18,11 +20,5 @@ Wordpress::Application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   # Wordpress defaults
-  NEWS_PERMALINK =  "/%year%/%monthnum%/%day%/%postname%/"
-
-
-
-
-
-
+  NEWS_PERMALINK = '/%year%/%monthnum%/%day%/%postname%/'
 end
